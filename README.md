@@ -9,4 +9,4 @@ I use this data to compile a Flask web app. The app is comprised of 3 main parts
 - JavaScript (scripts.js): the JavaScript code for showing and hiding the loading spinner.
 
 ## Access
-This is run with Render at https://weather-info.onrender.com. The site may take a while to load.
+This is run with Render at https://weather-info-wrcg.onrender.com. The site may take a while to load.
