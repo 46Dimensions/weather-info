@@ -24,7 +24,7 @@
         {% endif %}
     </a>    
 
-    <h1>🌦️ Weather Info</h1>
+    <h1><img src="{{ url_for('static', filename='images/favicon.png') }}" width="75" height="75"> Weather Info</h1>
     <form method="POST" class="weather-form" id="weather-form">
         <div class="tooltip-container" id="city-container">
             <input type="text" name="city" placeholder="Enter place name" autocomplete="off" aria-describedby="city-tooltip">
@@ -40,7 +40,11 @@
         </select>
 
         <button type="submit">Get Weather</button>
-        <button type="button" id="get-location">Use My Location</button>
+        <button type="button" id="get-location">
+            <img class="location-icon blue" src="{{ url_for('static', filename='images/location-icon-blue.png') }}" width="17" height="17" alt="Blue Location Icon">
+            <img class="location-icon white" src="{{ url_for('static', filename='images/location-icon-white.png') }}" width="17" height="17" alt="White Location Icon">
+            Use My Location
+        </button>
         <div id="location-error" class="error" style="display: none;"></div>
     </form>
 
@@ -64,7 +68,6 @@
             </div>
         {% endif %}
     {% endif %}
-
     <div id="forecast">
         <h3 class="big-font">{{ "Daily Forecast" if forecast_type == "daily" else "3-Hour Forecast" }}</h3>
         {% if forecast %}

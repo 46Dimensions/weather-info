@@ -14,14 +14,37 @@ body {
     transition: background 0.5s ease, color 0.3s ease;
 }
 
-body.clear { background: linear-gradient(to right, #56ccf2, #2f80ed); }
-body.clouds { background: linear-gradient(to right, #bdc3c7, #2c3e50); }
-body.rain { background: linear-gradient(to right, #667db6, #0082c8); }
-body.snow { background: linear-gradient(to right, #83a4d4, #b6fbff); }
-body.thunderstorm { background: linear-gradient(to right, #373B44, #4286f4); }
-body.drizzle { background: linear-gradient(to right, #74ebd5, #9face6); }
-body.mist { background: linear-gradient(to right, #3e5151, #decba4); }
-body.default { background: var(--light-bg); }
+body.clear {
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
+}
+
+body.clouds {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+body.rain {
+    background: linear-gradient(to right, #667db6, #0082c8);
+}
+
+body.snow {
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+
+body.thunderstorm {
+    background: linear-gradient(to right, #373B44, #4286f4);
+}
+
+body.drizzle {
+    background: linear-gradient(to right, #74ebd5, #9face6);
+}
+
+body.mist {
+    background: linear-gradient(to right, #3e5151, #decba4);
+}
+
+body.default {
+    background: var(--light-bg);
+}
 
 .theme-toggle {
     position: absolute;
@@ -64,7 +87,7 @@ form {
 }
 
 .loader {
-    border: 4px solid #f3f3f3; 
+    border: 4px solid #f3f3f3;
     border-top: 4px solid #3498db;
     border-radius: 50%;
     width: 40px;
@@ -73,8 +96,13 @@ form {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -85,7 +113,7 @@ input[type="text"] {
     width: 300px;
     font-size: 1em;
     outline: none;
-    box-shadow: 0 0 5px rgba(255,255,255,0.3);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 button[type="submit"] {
@@ -154,8 +182,8 @@ button[type="submit"] {
     border-radius: 25px;
     font-size: 1em;
     outline: none;
-    box-shadow: 0 0 5px rgba(255,255,255,0.3);
-}   
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
 
 .weather-form select {
     background-color: #ffffff;
@@ -248,20 +276,40 @@ button[type="submit"] {
     list-style: none;
 }
 
+#location-icon {
+    position: relative;
+}
+
+.location-icon {
+    display: inline-block;
+}
+
+.location-icon.white {
+    display: none;
+}
+
+#get-location:hover .location-icon.blue {
+    display: none;
+}
+
+#get-location:hover .location-icon.white {
+    display: inline-block;
+}
+
 #get-location {
-  background-color: white;
-  color: #2f80ed;
-  border: none;
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
+    background-color: white;
+    color: #2f80ed;
+    border: none;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
 }
 
 #get-location:hover {
-  background-color: #2f80ed;
-  color: white;
+    background-color: #2f80ed;
+    color: white;
 }
 
 input.highlighted {
