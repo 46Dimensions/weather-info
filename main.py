@@ -10,7 +10,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # API key for OpenWeatherMap (retrieved from environment variable)
-API_KEY = os.getenv("KEY")  # Load API key from the .env file
+API_KEY = os.environ["KEY"]
 
 def get_daily_forecast(forecast_list):
     daily_forecasts = {}
